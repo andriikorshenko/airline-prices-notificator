@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "q4u/os8O2iqQd0hRKmQbfjKdmNQ+uFrNPLt+3eM+D98=",
+  "Source": "AirlinePricesNotificator.Services.AirlineWeb",
+  "BasePath": "_content/AirlinePricesNotificator.Services.AirlineWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

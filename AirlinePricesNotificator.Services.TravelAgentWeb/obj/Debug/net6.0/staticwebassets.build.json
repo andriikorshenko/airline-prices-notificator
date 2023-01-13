@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QwR4EoOwvWsKd4M+uS/zf8wJjWEtAXpmHu40MLdkdQk=",
+  "Source": "AirlinePricesNotificator.Services.TravelAgentWeb",
+  "BasePath": "_content/AirlinePricesNotificator.Services.TravelAgentWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

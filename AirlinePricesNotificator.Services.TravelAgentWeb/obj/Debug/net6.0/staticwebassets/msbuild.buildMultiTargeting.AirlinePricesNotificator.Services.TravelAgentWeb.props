@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AirlinePricesNotificator.Services.TravelAgentWeb.props" />
+</Project>
