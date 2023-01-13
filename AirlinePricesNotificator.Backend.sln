@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinePricesNotificator.Services.AirlineWeb", "AirlinePricesNotificator.Services.AirlineWeb\AirlinePricesNotificator.Services.AirlineWeb.csproj", "{C815A279-A156-49F7-ACB3-2A30B3BA09DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinePriceNotificator.Services.SendAgent", "AirlinePriceNotificator.Services.SendAgent\AirlinePriceNotificator.Services.SendAgent.csproj", "{03432B75-9079-46D6-80C9-4805DB0F4C93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +19,17 @@ Global
 		{C815A279-A156-49F7-ACB3-2A30B3BA09DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C815A279-A156-49F7-ACB3-2A30B3BA09DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C815A279-A156-49F7-ACB3-2A30B3BA09DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03432B75-9079-46D6-80C9-4805DB0F4C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03432B75-9079-46D6-80C9-4805DB0F4C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03432B75-9079-46D6-80C9-4805DB0F4C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03432B75-9079-46D6-80C9-4805DB0F4C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C815A279-A156-49F7-ACB3-2A30B3BA09DC} = {0E2073D9-FFDB-4A0B-8804-F1A31B81A120}
+		{03432B75-9079-46D6-80C9-4805DB0F4C93} = {0E2073D9-FFDB-4A0B-8804-F1A31B81A120}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28084302-F8AF-4166-8989-04D620AF913E}
