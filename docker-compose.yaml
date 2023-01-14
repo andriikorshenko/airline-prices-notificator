@@ -1,0 +1,22 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: "rabbit1"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    labels:
+       NAME: "some-rabbit"
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+      
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Password@123
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"

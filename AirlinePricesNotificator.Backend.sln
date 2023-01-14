@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinePriceNotificator.Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirlinePricesNotificator.Services.TravelAgentWeb", "AirlinePricesNotificator.Services.TravelAgentWeb\AirlinePricesNotificator.Services.TravelAgentWeb.csproj", "{97D55AE2-3B2B-4236-8FDC-3E5C463BD394}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Items", "Items", "{F4429D60-921E-4FFF-A842-595C0B3AC0B1}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
