@@ -1,6 +1,7 @@
 version: "3.7"
 services:
   rabbitmq:
+    container_name: "rabbit-mq"
     image: rabbitmq:3-management
     hostname: "rabbit1"
     ports:
