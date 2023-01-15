@@ -51,10 +51,10 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp
             return await FindBySecretAsync(sub.Secret);
         }
 
-        public async Task<Result> DeleteAsync(int id)
+        public async Task<Result> DeleteAsync(string secret)
         {
-            var sub = WebhookSubscriptions
-                .FirstOrDefaultAsync(x => x.Id == id);
+            var sub = await WebhookSubscriptions
+                .FirstOrDefaultAsync(x => x.Secret == secret);
 
             if (sub == null)
             {

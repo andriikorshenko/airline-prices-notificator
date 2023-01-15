@@ -14,6 +14,6 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Repository
 
         Task<Result<WebhookSubscriptionDto>> CreateAsync(WebhookSubsriptionCreateDto dto);
 
-        Task<Result> DeleteAsync(int id);
+        Task<Result> DeleteAsync(string secret);
     }
 }

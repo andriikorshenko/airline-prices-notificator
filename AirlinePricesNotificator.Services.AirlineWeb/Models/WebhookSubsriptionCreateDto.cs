@@ -1,4 +1,6 @@
-﻿namespace AirlinePricesNotificator.Services.AirlineWeb.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace AirlinePricesNotificator.Services.AirlineWeb.Models
 {
     public record WebhookSubsriptionCreateDto
     {
