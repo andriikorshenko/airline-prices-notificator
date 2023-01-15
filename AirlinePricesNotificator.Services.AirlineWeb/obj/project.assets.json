@@ -2,6 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Ardalis.Result/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Ardalis.Result.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.dll": {}
+        }
+      },
+      "Ardalis.Result.FluentValidation/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Ardalis.Result": "4.1.0",
+          "FluentValidation": "11.1.0"
+        },
+        "compile": {
+          "lib/net6.0/Ardalis.Result.FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.FluentValidation.dll": {}
+        }
+      },
       "AutoMapper/12.0.0": {
         "type": "package",
         "dependencies": {
@@ -71,6 +93,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Azure.Identity.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FluentValidation/11.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
             "related": ".xml"
           }
         }
@@ -1312,6 +1347,34 @@
     }
   },
   "libraries": {
+    "Ardalis.Result/4.1.0": {
+      "sha512": "A7JER5p3FDkgv9HW1AexIojg0jT1LWzPDu2C0YtAiSKGenOnha2dY6sBZb3LbRP9teEKECRXgilHmuWs+BqnnA==",
+      "type": "package",
+      "path": "ardalis.result/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.result.4.1.0.nupkg.sha512",
+        "ardalis.result.nuspec",
+        "icon.png",
+        "lib/net6.0/Ardalis.Result.dll",
+        "lib/netstandard2.0/Ardalis.Result.dll"
+      ]
+    },
+    "Ardalis.Result.FluentValidation/4.1.0": {
+      "sha512": "q5rZnAwEVIsbWuwMQfP8XTLziRVSptAmv/jZJZ3XCqwx6QUNHvt8NowqG6+nrO4/C1ZVBJVmKad7piCm24/UZg==",
+      "type": "package",
+      "path": "ardalis.result.fluentvalidation/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.result.fluentvalidation.4.1.0.nupkg.sha512",
+        "ardalis.result.fluentvalidation.nuspec",
+        "icon.png",
+        "lib/net6.0/Ardalis.Result.FluentValidation.dll",
+        "lib/netstandard2.0/Ardalis.Result.FluentValidation.dll"
+      ]
+    },
     "AutoMapper/12.0.0": {
       "sha512": "0Rmg0zI5AFu1O/y//o9VGyhxKjhggWpk9mOA1tp0DEVx40c61bs+lnQv+0jUq8XbniF7FKgIVvI1perqiMtLrA==",
       "type": "package",
@@ -1377,6 +1440,27 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentValidation/11.1.0": {
+      "sha512": "Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
+      "type": "package",
+      "path": "fluentvalidation/11.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.1.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3932,6 +4016,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Ardalis.Result >= 4.1.0",
+      "Ardalis.Result.FluentValidation >= 4.1.0",
       "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -3982,6 +4068,14 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Ardalis.Result": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
+          "Ardalis.Result.FluentValidation": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "AutoMapper": {
             "target": "Package",
             "version": "[12.0.0, )"

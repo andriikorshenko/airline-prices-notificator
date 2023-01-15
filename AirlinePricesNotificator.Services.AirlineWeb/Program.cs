@@ -1,12 +1,16 @@
+using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using AirlinePricesNotificator.Services.AirlineWeb.Data;
 using AirlinePricesNotificator.Services.AirlineWeb.Models;
-using Microsoft.EntityFrameworkCore;
+using AirlinePricesNotificator.Services.AirlineWeb.Repository;
+using AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IRepository, Repository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddDbContext<AirlineWebDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
@@ -21,10 +25,13 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/api/webhook-subscription", (WebhookSubsriptionCreateDto dto) =>
+app.MapPost("/api/webhook-subscription", (     
+    WebhookSubsriptionCreateDto dto,
+    IRepository repository,
+    IMapper mapper) =>
 {
     
 })
-.WithName("CreateSubscription");
+.WithName("create");
 
 app.Run();

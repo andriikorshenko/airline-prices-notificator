@@ -2,6 +2,8 @@
 {
     public record WebhookSubscriptionDto
     {
+        public int Id { get; init; }
+
         public string WebhookUri { get; init; } = string.Empty;
 
         public string Secret { get; init; } = string.Empty;
