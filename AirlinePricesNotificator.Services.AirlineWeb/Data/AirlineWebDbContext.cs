@@ -9,5 +9,14 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Data
             : base(options) { }
 
         public DbSet<WebhookSubscription> WebhookSubscriptions { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AirlineWebDbContext).Assembly);
+
+            modelBuilder.HasDefaultSchema("dbo");
+        }
     }
 }

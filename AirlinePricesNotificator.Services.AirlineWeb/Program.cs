@@ -3,7 +3,6 @@ using AirlinePricesNotificator.Services.AirlineWeb.Data;
 using AirlinePricesNotificator.Services.AirlineWeb.Models;
 using AirlinePricesNotificator.Services.AirlineWeb.Repository;
 using AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp;
-using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
