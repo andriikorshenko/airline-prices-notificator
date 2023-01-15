@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "AirlinePricesNotificator.Services.AirlineWeb/1.0.0": {
         "dependencies": {
+          "Ardalis.Result": "4.1.0",
+          "Ardalis.Result.FluentValidation": "4.1.0",
           "AutoMapper": "12.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
@@ -20,6 +22,26 @@
         },
         "runtime": {
           "AirlinePricesNotificator.Services.AirlineWeb.dll": {}
+        }
+      },
+      "Ardalis.Result/4.1.0": {
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "Ardalis.Result.FluentValidation/4.1.0": {
+        "dependencies": {
+          "Ardalis.Result": "4.1.0",
+          "FluentValidation": "11.1.0"
+        },
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.FluentValidation.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
         }
       },
       "AutoMapper/12.0.0": {
@@ -76,6 +98,14 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.6.0.0",
             "fileVersion": "1.600.22.20503"
+          }
+        }
+      },
+      "FluentValidation/11.1.0": {
+        "runtime": {
+          "lib/net6.0/FluentValidation.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.1.0.0"
           }
         }
       },
@@ -797,6 +827,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Ardalis.Result/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A7JER5p3FDkgv9HW1AexIojg0jT1LWzPDu2C0YtAiSKGenOnha2dY6sBZb3LbRP9teEKECRXgilHmuWs+BqnnA==",
+      "path": "ardalis.result/4.1.0",
+      "hashPath": "ardalis.result.4.1.0.nupkg.sha512"
+    },
+    "Ardalis.Result.FluentValidation/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5rZnAwEVIsbWuwMQfP8XTLziRVSptAmv/jZJZ3XCqwx6QUNHvt8NowqG6+nrO4/C1ZVBJVmKad7piCm24/UZg==",
+      "path": "ardalis.result.fluentvalidation/4.1.0",
+      "hashPath": "ardalis.result.fluentvalidation.4.1.0.nupkg.sha512"
+    },
     "AutoMapper/12.0.0": {
       "type": "package",
       "serviceable": true,
@@ -824,6 +868,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "FluentValidation/11.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ld7w+2jOmnhQqFkngEGuEWTRa5j6u4Xzli7jKxRtbA5PtuHHcpin01qxvxYL0LomeJuzRMGAOURu2rKONdjKQA==",
+      "path": "fluentvalidation/11.1.0",
+      "hashPath": "fluentvalidation.11.1.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

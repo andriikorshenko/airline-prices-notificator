@@ -29,11 +29,11 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp
                 .ToListAsync();
         }
 
-        public async Task<Result<WebhookSubscriptionDto>> FindByIdAsync(int id)
+        public async Task<Result<WebhookSubscriptionDto>> FindBySecretAsync(string secret)
         {
             var sub = await WebhookSubscriptions
                 .ProjectTo<WebhookSubscriptionDto>(_mapper.ConfigurationProvider)
-                .FirstOrDefaultAsync(x => x.Id == id);
+                .FirstOrDefaultAsync(x => x.Secret == secret);
 
             return sub == null ?
                 Result.NotFound() :
@@ -42,11 +42,13 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp
 
         public async Task<Result<WebhookSubscriptionDto>> CreateAsync(WebhookSubsriptionCreateDto dto)
         {
-            var sub = _mapper.Map<WebhookSubscriptionDto>(dto);
+            var sub = _mapper.Map<WebhookSubscription>(dto);
+            sub.Secret = Guid.NewGuid().ToString();
+            sub.WebhookPublisher = "WizzAir"; //Just for a test...
 
             _dbContext.Add(sub);
             await _dbContext.SaveChangesAsync();
-            return await FindByIdAsync(sub.Id);
+            return await FindBySecretAsync(sub.Secret);
         }
 
         public async Task<Result> DeleteAsync(int id)

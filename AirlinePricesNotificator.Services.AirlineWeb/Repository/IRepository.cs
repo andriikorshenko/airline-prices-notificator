@@ -10,7 +10,7 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Repository
 
         Task<IReadOnlyList<WebhookSubscriptionDto>> AllAsync();
 
-        Task<Result<WebhookSubscriptionDto>> FindByIdAsync(int id);
+        Task<Result<WebhookSubscriptionDto>> FindBySecretAsync(string secret);
 
         Task<Result<WebhookSubscriptionDto>> CreateAsync(WebhookSubsriptionCreateDto dto);
 

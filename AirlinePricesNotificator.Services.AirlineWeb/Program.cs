@@ -1,4 +1,3 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using AirlinePricesNotificator.Services.AirlineWeb.Data;
 using AirlinePricesNotificator.Services.AirlineWeb.Models;
@@ -25,13 +24,29 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/api/webhook-subscription", (     
-    WebhookSubsriptionCreateDto dto,
-    IRepository repository,
-    IMapper mapper) =>
+app.MapGet("/api/webhook-subscriptions", async (
+    IRepository repository) =>
 {
-    
+    return await repository.AllAsync();
 })
-.WithName("create");
+.WithName("GetAllSubscriptions");
+
+app.MapGet("/api/webhook-subscriptions/{secret}", async (
+    string secret,
+    IRepository repository) =>
+{
+    var result = await repository.FindBySecretAsync(secret);
+    return result.Value;
+})
+.WithName("GetSubscriptionBySecret");
+
+app.MapPost("/api/webhook-subscriptions/create", async(     
+    WebhookSubsriptionCreateDto dto,
+    IRepository repository) =>
+{
+    var result = await repository.CreateAsync(dto);
+    return result.Value;
+})
+.WithName("CreateSubscription");
 
 app.Run();
