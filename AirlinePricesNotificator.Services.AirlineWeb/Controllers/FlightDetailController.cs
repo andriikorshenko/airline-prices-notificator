@@ -29,6 +29,15 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Controllers
             return CreatedAtRoute(nameof(GetFlightDetailsByCode), new { code = result.Value.FlightCode }, result.Value);
         }
 
+        [HttpPut("update/{id}")]
+        public async Task<object> UpdateFlightDetails(int id, FlightDetailUpdateDto dto)
+        {
+            var result = await _flightDetailService.UpdateAsync(dto, id);
+            return result.IsSuccess ?
+                NoContent() :
+                StatusCodes.Status404NotFound;
+        }
+
         [HttpGet("delete/{code}")]
         public async Task<object> DeleteFlightDetailsByCode(string code)
         {

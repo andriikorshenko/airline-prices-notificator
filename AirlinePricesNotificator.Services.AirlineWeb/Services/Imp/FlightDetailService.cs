@@ -42,6 +42,22 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Services.Imp
             return await FindByCodeAsync(flight.FlightCode);
         }
 
+        public async Task<Result> UpdateAsync(FlightDetailUpdateDto dto, int id)
+        {
+            var flight = await FlightDetails
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (flight == null)
+            {
+                return Result.NotFound();
+            }
+
+            _mapper.Map(dto, flight);
+
+            await _dbContext.SaveChangesAsync();
+            return Result.Success();
+        }
+
         public async Task<Result> DeleteAsync(string code)
         {
             var flight = await FlightDetails

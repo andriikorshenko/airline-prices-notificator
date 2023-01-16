@@ -12,6 +12,8 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Services
 
         Task<Result<FlightDetailDto>> CreateAsync(FlightDetailCreateDto dto);
 
+        Task<Result> UpdateAsync(FlightDetailUpdateDto dto, int id);
+
         Task<Result> DeleteAsync(string secret);
     }
 }

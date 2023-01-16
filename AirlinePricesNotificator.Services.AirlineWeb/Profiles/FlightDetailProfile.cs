@@ -10,6 +10,7 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Profiles
         {
             CreateMap<FlightDetail, FlightDetailDto>();
             CreateMap<FlightDetailCreateDto, FlightDetail>();
+            CreateMap<FlightDetailUpdateDto, FlightDetail>();
         }
     }
 }
