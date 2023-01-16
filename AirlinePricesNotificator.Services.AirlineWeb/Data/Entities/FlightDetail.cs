@@ -6,7 +6,7 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Data.Entities
 {
     public class FlightDetail : Entity
     {
-        public int FlightCode { get; set; }
+        public string FlightCode { get; set; }
 
         public decimal Price { get; set; }
     }

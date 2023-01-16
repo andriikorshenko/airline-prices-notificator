@@ -4,7 +4,7 @@
     {
         public int Id { get; init; }
 
-        public int FlightCode { get; init; }
+        public string FlightCode { get; init; } = string.Empty;
 
         public decimal Price { get; init; }
     }

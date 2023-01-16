@@ -2,7 +2,7 @@
 {
     public record FlightDetailCreateDto
     {
-        public int FlightCode { get; init; }
+        public string FlightCode { get; init; } = string.Empty;
 
         public decimal Price { get; init; }
     }

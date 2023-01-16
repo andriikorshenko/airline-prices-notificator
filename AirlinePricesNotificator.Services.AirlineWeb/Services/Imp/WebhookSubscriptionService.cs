@@ -6,14 +6,14 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp
+namespace AirlinePricesNotificator.Services.AirlineWeb.Services.Imp
 {
-    public class Repository : IRepository
+    public class WebhookSubscriptionService : IWebhookSubscriptionService
     {
         private readonly AirlineWebDbContext _dbContext;
         private readonly IMapper _mapper;
 
-        public Repository(AirlineWebDbContext dbContext, IMapper mapper)
+        public WebhookSubscriptionService(AirlineWebDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;

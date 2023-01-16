@@ -4,12 +4,12 @@ using AutoMapper;
 
 namespace AirlinePricesNotificator.Services.AirlineWeb.Profiles
 {
-    public class WebhookSubscriptionProfile : Profile
+    public class FlightDetailProfile : Profile
     {
-        public WebhookSubscriptionProfile()
+        public FlightDetailProfile()
         {
-            CreateMap<WebhookSubscription, WebhookSubscriptionDto>();
-            CreateMap<WebhookSubsriptionCreateDto, WebhookSubscription>();
+            CreateMap<FlightDetail, FlightDetailDto>();
+            CreateMap<FlightDetailCreateDto, FlightDetail>();
         }
     }
 }

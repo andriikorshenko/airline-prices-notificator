@@ -1,12 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using AirlinePricesNotificator.Services.AirlineWeb.Data;
-using AirlinePricesNotificator.Services.AirlineWeb.Repository;
-using AirlinePricesNotificator.Services.AirlineWeb.Repository.Imp;
+using AirlinePricesNotificator.Services.AirlineWeb.Services;
+using AirlinePricesNotificator.Services.AirlineWeb.Services.Imp;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddScoped<IRepository, Repository>();
+builder.Services.AddScoped<IWebhookSubscriptionService, WebhookSubscriptionService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();

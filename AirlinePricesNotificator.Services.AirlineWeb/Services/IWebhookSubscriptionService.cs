@@ -2,9 +2,9 @@
 using AirlinePricesNotificator.Services.AirlineWeb.Models;
 using Ardalis.Result;
 
-namespace AirlinePricesNotificator.Services.AirlineWeb.Repository
+namespace AirlinePricesNotificator.Services.AirlineWeb.Services
 {
-    public interface IRepository
+    public interface IWebhookSubscriptionService
     {
         IQueryable<WebhookSubscription> WebhookSubscriptions { get; }
 
