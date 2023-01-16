@@ -16,7 +16,7 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Controllers
         }
 
         [HttpGet("")]
-        public async Task<IReadOnlyList<WebhookSubscriptionDto>> GetSubscriptions()
+        public async Task<IReadOnlyList<WebhookSubscriptionDto>> GetAllSubscriptions()
         {
             return await _webhookSubscriptionService.AllAsync();
         }
@@ -29,7 +29,7 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<WebhookSubscriptionDto>> GetSubscriptionsBySecret(WebhookSubsriptionCreateDto dto)
+        public async Task<ActionResult<WebhookSubscriptionDto>> CreateSubscription(WebhookSubsriptionCreateDto dto)
         {
             var result = await _webhookSubscriptionService.CreateAsync(dto);
             return CreatedAtRoute(nameof(GetSubscriptionsBySecret), new { secret = result.Value.Secret}, result.Value);
