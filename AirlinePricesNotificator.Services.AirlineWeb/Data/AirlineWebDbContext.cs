@@ -10,6 +10,8 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Data
 
         public DbSet<WebhookSubscription> WebhookSubscriptions { get; set; }
 
+        public DbSet<FlightDetail> FlightDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

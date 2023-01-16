@@ -4,14 +4,10 @@
 
 namespace AirlinePricesNotificator.Services.AirlineWeb.Data.Entities
 {
-    public class WebhookSubscription : Entity
-    { 
-        public string WebhookUri { get; set; }
+    public class FlightDetail : Entity
+    {
+        public int FlightCode { get; set; }
 
-        public string Secret { get; set; }
-
-        public string WebhookType { get; set; }
-
-        public string WebhookPublisher { get; set; }
+        public decimal Price { get; set; }
     }
 }
