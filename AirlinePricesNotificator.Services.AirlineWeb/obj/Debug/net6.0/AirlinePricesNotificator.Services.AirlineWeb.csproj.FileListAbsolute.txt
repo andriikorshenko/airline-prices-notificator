@@ -92,3 +92,4 @@ C:\Users\user\Desktop\AirlinePricesNotificator.Backend\AirlinePricesNotificator.
 C:\Users\user\Desktop\AirlinePricesNotificator.Backend\AirlinePricesNotificator.Services.AirlineWeb\bin\Debug\net6.0\Ardalis.Result.FluentValidation.dll
 C:\Users\user\Desktop\AirlinePricesNotificator.Backend\AirlinePricesNotificator.Services.AirlineWeb\bin\Debug\net6.0\FluentValidation.dll
 C:\Users\user\Desktop\AirlinePricesNotificator.Backend\AirlinePricesNotificator.Services.AirlineWeb\bin\Debug\net6.0\FluentValidator.dll
+C:\Users\user\Desktop\AirlinePricesNotificator.Backend\AirlinePricesNotificator.Services.AirlineWeb\bin\Debug\net6.0\AirlinePricesNotificator.Services.AirlineWeb.staticwebassets.runtime.json

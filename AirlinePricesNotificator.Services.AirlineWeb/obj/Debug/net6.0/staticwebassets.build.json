@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "q4u/os8O2iqQd0hRKmQbfjKdmNQ+uFrNPLt+3eM+D98=",
+  "Hash": "eFWaLvxpuAwpCIUT4p38U+qKOTDBnAiHfySeRJ+3D/E=",
   "Source": "AirlinePricesNotificator.Services.AirlineWeb",
   "BasePath": "_content/AirlinePricesNotificator.Services.AirlineWeb",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "AirlinePricesNotificator.Services.AirlineWeb\\wwwroot",
+      "Source": "AirlinePricesNotificator.Services.AirlineWeb",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\AirlinePricesNotificator.Backend\\AirlinePricesNotificator.Services.AirlineWeb\\wwwroot\\",
+      "BasePath": "_content/AirlinePricesNotificator.Services.AirlineWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\AirlinePricesNotificator.Backend\\AirlinePricesNotificator.Services.AirlineWeb\\wwwroot\\index.html",
+      "SourceId": "AirlinePricesNotificator.Services.AirlineWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\AirlinePricesNotificator.Backend\\AirlinePricesNotificator.Services.AirlineWeb\\wwwroot\\",
+      "BasePath": "_content/AirlinePricesNotificator.Services.AirlineWeb",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
 }
