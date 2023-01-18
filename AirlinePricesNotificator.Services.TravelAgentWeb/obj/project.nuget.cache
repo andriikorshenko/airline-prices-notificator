@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cBHLmY2/cmHwgvSD7cwiUh1R7hmXGOtWAu+LwwOxNnXVaPAhrlMk8XY1GJIMM3HilSTHYO9PKIy8L94vniGApg==",
+  "dgSpecHash": "jK0FcMybfPXURSlnwHfGRCjyBryqxWN63JsWceKo/S6Iw9QXbB8GIfDuQMV6z8XHQVmhmIoQXwXGpIqza7x/Qg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\AirlinePricesNotificator.Backend\\AirlinePricesNotificator.Services.TravelAgentWeb\\AirlinePricesNotificator.Services.TravelAgentWeb.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
