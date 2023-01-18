@@ -27,8 +27,8 @@
         </div>
         <br />
         <div class="form-group">
-            <label for="webhooktype">Webhook Type</label>
-            <select class="form-control" id="webhooktype">
+            <label for="webhookType">Webhook Type</label>
+            <select class="form-control" id="webhookType">
                 <option>Price Change</option>
                 <option>Seat Availiable</option>
                 <option>Flight Delays & Disruptions</option>
@@ -39,6 +39,46 @@
             <button id="register" class="btn btn-primary w-100" type="submit">Register</button>
         </div>
     </div>
+
+    <script>
+        var register = document.querySelector('#register');
+        var webhookUri = document.querySelector('#webhook');
+        var webhookType = document.querySelector('#webhookType');
+        var successBox = document.querySelector('#alertSuccess');
+        var dangerBox = document.querySelector('#alertDanger');
+        var dangerMessage = document.querySelector('#dangerMessage');
+        var successMessage = document.querySelector('#successMessage');
+
+        successBox.style.display = 'none';
+        dangerBox.style.display = 'none';
+
+        register.onclick = function () {
+            successBox.style.display = 'none';
+            dangerBox.style.display = 'none';
+
+            if (webhook.value == "") {
+                dangerMessage.innerHTML = "Please Enter URI";
+                dangerBox.style.display = 'block';
+            }
+            else {
+                (async () => {
+                    const rawResponse = await fetch('https://localhost:7077/api/webhook-subscriptions/create', {
+                        method: 'post',
+                        body: JSON.stringify({ WebhookUri: webhookUri.value, WebhookType: webhookType.value }),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                    const content = await rawResponse.json();
+
+                    successMessage.innerHTML = "Webhook Register please use secret: " + content.secret + " to validate inbound";
+                    successBox.style.display = 'block';
+
+                    console.log(content);
+                })();
+            }
+        };
+    </script>
 </body>
 </html>
 
