@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jK0FcMybfPXURSlnwHfGRCjyBryqxWN63JsWceKo/S6Iw9QXbB8GIfDuQMV6z8XHQVmhmIoQXwXGpIqza7x/Qg==",
+  "dgSpecHash": "MFGPSW7rs3yPS6PQU08kXU7vkc3fTK9BxCbI130AKOt1g2ODf6nHDAFJ6NeMBdH7PKLtpr6WuCzT46eAu52G+w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\AirlinePricesNotificator.Backend\\AirlinePricesNotificator.Services.TravelAgentWeb\\AirlinePricesNotificator.Services.TravelAgentWeb.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\ardalis.result\\4.1.0\\ardalis.result.4.1.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

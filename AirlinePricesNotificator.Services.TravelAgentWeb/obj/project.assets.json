@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Ardalis.Result/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Ardalis.Result.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.dll": {}
+        }
+      },
       "AutoMapper/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -1312,6 +1321,20 @@
     }
   },
   "libraries": {
+    "Ardalis.Result/4.1.0": {
+      "sha512": "A7JER5p3FDkgv9HW1AexIojg0jT1LWzPDu2C0YtAiSKGenOnha2dY6sBZb3LbRP9teEKECRXgilHmuWs+BqnnA==",
+      "type": "package",
+      "path": "ardalis.result/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ardalis.result.4.1.0.nupkg.sha512",
+        "ardalis.result.nuspec",
+        "icon.png",
+        "lib/net6.0/Ardalis.Result.dll",
+        "lib/netstandard2.0/Ardalis.Result.dll"
+      ]
+    },
     "AutoMapper/12.0.1": {
       "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "type": "package",
@@ -3932,6 +3955,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Ardalis.Result >= 4.1.0",
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -3982,6 +4006,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Ardalis.Result": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "AutoMapper": {
             "target": "Package",
             "version": "[12.0.1, )"
