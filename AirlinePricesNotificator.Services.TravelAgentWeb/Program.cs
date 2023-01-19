@@ -1,9 +1,12 @@
 using AirlinePricesNotificator.Services.TravelAgentWeb.Data;
+using AirlinePricesNotificator.Services.TravelAgentWeb.Services;
+using AirlinePricesNotificator.Services.TravelAgentWeb.Services.Imp;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<INotificationsService, NotificationsService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
