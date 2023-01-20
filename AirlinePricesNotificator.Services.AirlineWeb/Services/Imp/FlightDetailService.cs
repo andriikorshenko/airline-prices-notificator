@@ -11,11 +11,16 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Services.Imp
     public class FlightDetailService : IFlightDetailService
     {
         private readonly AirlineWebDbContext _dbContext;
+        private readonly IMessageBusService _messageBusService;
         private readonly IMapper _mapper;
 
-        public FlightDetailService(AirlineWebDbContext dbContext, IMapper mapper)
+        public FlightDetailService(
+            AirlineWebDbContext dbContext, 
+            IMessageBusService messageBusService, 
+            IMapper mapper)
         {
             _dbContext = dbContext;
+            _messageBusService = messageBusService;
             _mapper = mapper;
         }
 
@@ -52,9 +57,29 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Services.Imp
                 return Result.NotFound();
             }
 
-            _mapper.Map(dto, flight);
+            decimal oldPrice = flight.Price;
 
+            _mapper.Map(dto, flight);
             await _dbContext.SaveChangesAsync();
+
+            if (oldPrice != flight.Price)
+            {
+                Console.WriteLine("Price Changed - Please send on bus");
+
+                var message = new NotificationMessageDto()
+                {
+                    WebhookType = "pricechange",
+                    OldPrice = oldPrice,
+                    NewPrice = flight.Price,
+                    FlightCode = flight.FlightCode
+                };
+                _messageBusService.SendMessage(message);
+            }
+            else 
+            {
+                Console.WriteLine("No Price Change");
+            }
+
             return Result.Success();
         }
 
