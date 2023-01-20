@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AirlinePricesNotificator.Services.TravelAgentWeb/1.0.0": {
         "dependencies": {
+          "Ardalis.Result": "4.1.0",
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
@@ -20,6 +21,14 @@
         },
         "runtime": {
           "AirlinePricesNotificator.Services.TravelAgentWeb.dll": {}
+        }
+      },
+      "Ardalis.Result/4.1.0": {
+        "runtime": {
+          "lib/net6.0/Ardalis.Result.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
         }
       },
       "AutoMapper/12.0.1": {
@@ -796,6 +805,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Ardalis.Result/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A7JER5p3FDkgv9HW1AexIojg0jT1LWzPDu2C0YtAiSKGenOnha2dY6sBZb3LbRP9teEKECRXgilHmuWs+BqnnA==",
+      "path": "ardalis.result/4.1.0",
+      "hashPath": "ardalis.result.4.1.0.nupkg.sha512"
     },
     "AutoMapper/12.0.1": {
       "type": "package",
