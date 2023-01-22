@@ -39,6 +39,8 @@ namespace AirlinePriceNotificator.Services.SendAgent.App.Imp
                         queue: queueName, 
                         autoAck: true, 
                         consumer: consumer);
+
+                    Console.ReadLine();
                 }
             }
         }
