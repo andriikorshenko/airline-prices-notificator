@@ -4,9 +4,9 @@
     {
         public string WebhookUri { get; set; } = string.Empty;
 
-        public string Publisher { get; init; } = string.Empty;
+        public string Publisher { get; set; } = string.Empty;
 
-        public string Secret { get; init; } = string.Empty;
+        public string Secret { get; set; } = string.Empty;
 
         public string FlightCode { get; init; } = string.Empty;
 
