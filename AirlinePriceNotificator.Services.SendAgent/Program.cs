@@ -11,10 +11,18 @@ using Microsoft.Extensions.Hosting;
 var host = Host.CreateDefaultBuilder()
     .ConfigureServices((context, services) =>
     {
+        services.AddSingleton<IConfiguration>(new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+            .Build());
+
         services.AddSingleton<IAppHost, AppHost>();
         services.AddSingleton<IWebhookClient, WebhookClient>();
-        services.AddDbContext<SendAgentDbContext>(opt => 
-            opt.UseSqlServer(context.Configuration.GetConnectionString("DbConnection")));
+        
+        services.AddDbContext<SendAgentDbContext>(options =>
+            options.UseSqlServer(
+                "Server=.;Database=AirlineWeb;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True",
+                sqlServerOptions => 
+                    sqlServerOptions.CommandTimeout((int)TimeSpan.FromMinutes(3).TotalSeconds)));
 
         services.AddHttpClient();
     }).Build();

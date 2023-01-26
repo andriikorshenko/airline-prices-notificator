@@ -64,8 +64,7 @@ namespace AirlinePriceNotificator.Services.SendAgent.App.Imp
                             FlightCode = message.FlightCode
                         };
 
-                        foreach (var item in _dbContext.Set<WebhookSubscription>()
-                            .Where(x => x.WebhookType == message.WebhookType))
+                        foreach (var item in _dbContext.Set<WebhookSubscription>().Where(x => x.WebhookType == message.WebhookType))
                         {
                             webhookToSend.WebhookUri = item.WebhookUri;
                             webhookToSend.Secret = item.Secret;

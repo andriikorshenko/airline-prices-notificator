@@ -27,7 +27,9 @@ namespace AirlinePricesNotificator.Services.AirlineWeb.Services.Imp
 
                     channel.BasicPublish(exchange: "trigger", routingKey: "", basicProperties: null, body: body);
 
-                    Console.WriteLine("--> Message Published on MessageBus");
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("--> Message Published on RabbitMQ Massage Bus");
+                    Console.ResetColor();
                 }
             }            
         }

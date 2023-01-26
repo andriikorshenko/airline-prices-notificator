@@ -28,7 +28,9 @@ namespace AirlinePriceNotificator.Services.SendAgent.Client.Imp
             {
                 using (var response = await httpClient.SendAsync(request))
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Success!");
+                    Console.ResetColor();
                     response.EnsureSuccessStatusCode();
                 }
             }
